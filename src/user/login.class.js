@@ -7,8 +7,12 @@ class Login {
         // definition du listener sur le formulaire
 
         this.formListener();
+        this.submitListener();
     }
 
+
+
+    
     /**
      * methode qui regarde ce que fait l'utilisateur
      * @param void
@@ -21,15 +25,38 @@ class Login {
             function (event) {
                 const login = $('[name="loginField"]');
                 const password = $('[name="passwordField"');
-                if (login.val() !== '' && password.val() !== '') {
-            $('#btnLogin').removeAttr('disabled');
-        
-        }else{
-            $('#btnLogin').attr('disabled','disabled');
-        }
+                if (login.val().length >= 5 && password.val().length >= 5) {
+                    $('#btnLogin').removeAttr('disabled');
 
-    }
+                } else {
+                    $('#btnLogin').attr('disabled', 'disabled');
+                }
+
+            }
         )
 
-}
+    }
+
+    submitListener() {
+        $('#loginForm').on(
+            'submit',
+            function (event) {
+                event.preventDefault(); // empeche action par defaut
+                const user = new User();
+                user.setUserName($('[name="loginField"]').val());
+                user.setPassword($('[name="passwordField"]').val());
+                if (user.authenticate()) {
+                    console.log('Oki c\'est bon')
+                } else {
+                    $('[name="loginField"]').val('') ;
+                    $('[name="passwordField"]').val('') ;
+                    $('#btnLogin').attr('disabled', 'disabled');
+                    console.log('non je te connais pas')
+
+                }
+            }
+        )
+    }
+
+
 }
