@@ -1,18 +1,89 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Hello javascript</title>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Hello javascript</title>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- commentaire :D -->
-    <h1 id="main-title"></h1>
- <script src="./assets/javascript/main.js">
- 
- </script>
+
+    <div class="container">
+        <header>
+            <h1 id="main-title"></h1>
+        </header>
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <!-- nom du menu -->
+            <a class="navbar-brand" href="#" title="Strories">Stories</a>
+            <!-- buton burger-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- contenu des elements du menu -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" title="Accueil">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" title="Toutes les stories">Toutes les stories</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  disabled" href="#" title="Mes stories">Mes stories</a>
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Utilisateur
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+
+        <div app>
+            <form id="loginForm" classe="form-stacked">
+                <input type="text" name="loginField" autocomplete="off" class="form-control" placeholder="votre identifiant">
+                <input type="password" name="passwordField" autocomplete="off" class="form-control" placeholder="votre mot de passe">
+                <button type="submit" id="btnLogin" class="btn btn-success" disabled>connexion</button>
+
+
+            </form>
+        </div>
+        <footer>
+            &copy; AELION2018
+        </footer>
+    </div>
+
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./src/user/login.class.js"></script>
+    <script src="./assets/javascript/main.js"></script>
+
 
 
 </body>
