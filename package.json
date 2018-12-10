@@ -1,0 +1,17 @@
+{
+  "name": "intro",
+  "version": "1.0.0",
+  "description": "introduction au langage javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "es6",
+    "css",
+    "html"
+  ],
+  "author": "Justin_Girot",
+  "license": "ISC"
+}
