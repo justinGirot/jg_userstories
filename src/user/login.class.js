@@ -52,6 +52,9 @@ class Login {
                     $('[name="passwordField"]').val('') ;
                     $('#btnLogin').attr('disabled', 'disabled');
                     console.log('non je te connais pas')
+                    const toast = new Toast({'duration': 2, 
+                    'message': 'on te connait pas'});
+                    toast.ToastIt();
 
                 }
             }
