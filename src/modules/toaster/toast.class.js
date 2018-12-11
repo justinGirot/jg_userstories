@@ -48,7 +48,8 @@ class Toast {
         toaster
             .addClass('toast')
             .addClass(this.backgroundClass)
-            .html(this.message);
+
+            .html('<p>'+ '----' + this.message +'----'+'</p>');
         //ajoute le toaster au decument lui même
 
         toaster.appendTo($('body'))
